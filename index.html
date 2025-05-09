@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Generate a <span id="highlight">random password<span></h1>
+        <h2>Never use an insecure password again.</h2>
+        <div id="btn-section">
+            <div id="options">
+                <p>Symbols: </p><button id="symbol-toggle-btn" class="options-btn" onclick="toggleSymbol()">On</button>
+                <p>Numbers: </p><button id="numbers-toggle-btn" class="options-btn" onclick="toggleNumbers()">On</button>
+                <p>Password Length:</p><input id='password-length' placeholder="15">
+            </div>
+            <button id="genPassword-btn" onclick="createPassword()">Generate passwords</button>
+        </div>
+        <hr>
+        <p>Click on generated password to copy to clipboard!</p>
+        <p>Generated: </p>
+        <div id="result-section">
+            <p id="result-1" onclick="copyToClickBoard(this)"></p>
+            <p id="result-2" onclick="copyToClickBoard(this)"></p>
+        </div>
+        <div id=snackbar> Copied to Clipboard!</div>
+        <script src="index.js"></script>
+    </body>
+</html>
